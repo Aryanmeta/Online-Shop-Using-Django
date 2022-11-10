@@ -24,7 +24,7 @@ class SignUpPageTest(TestCase):
         self.assertContains(response, 'Sign Up')
 
     def test_signup_form(self):
-        user = get_user_model().objects.create_user(
+        get_user_model().objects.create_user(
             self.username,
             self.email
         )
