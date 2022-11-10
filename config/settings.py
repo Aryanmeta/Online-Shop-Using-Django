@@ -122,6 +122,7 @@ AUTHENTICATION_BACKENDS = [
     # django allauth
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
@@ -152,7 +153,7 @@ LOGOUT_REDIRECT_URL = 'home'
 
 # all auth settings
 ACCOUNT_SESSION_REMEMBER = True
-ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+# ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 
 # crispy forms settings
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
