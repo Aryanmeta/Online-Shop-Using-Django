@@ -17,7 +17,7 @@ class SignUpPageTest(TestCase):
 
     def test_signup_template_used(self):
         response = self.client.get(reverse('signup'))
-        self.assertTemplateUsed(response, 'registration/signup.html')
+        self.assertTemplateUsed(response, 'account/signup.html')
 
     def test_signup_page_content(self):
         response = self.client.get(reverse('signup'))
