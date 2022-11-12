@@ -16,7 +16,11 @@ class SignUpPageTest(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_signup_template_used(self):
+<<<<<<< HEAD
         response = self.client.get(reverse('account_signup'))
+=======
+        response = self.client.get(reverse('signup'))
+>>>>>>> refs/remotes/origin/main
         self.assertTemplateUsed(response, 'account/signup.html')
 
     def test_signup_page_content(self):
