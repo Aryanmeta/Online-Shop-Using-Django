@@ -3,11 +3,10 @@
 {% block content %}
     <h2>Product List</h2>
     {% for product in products %}
-        <h5>{{ product.title | capfirst}}</h5>
+        <a href="{{ product.get_absolute_url }}"><h5>{{ product.title | capfirst}}</h5></a>
         <h5>{{ product.description | truncatewords:30 | linebreaks }}</h5>
         <h5>{{ product.price }}</h5>
         <h5>{{ product.datetime_created }}</h5>
         <p>-------------------------</p>
     {% endfor %}
-
 {% endblock %}
