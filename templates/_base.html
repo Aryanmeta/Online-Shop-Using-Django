@@ -8,8 +8,11 @@
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
-
-<a href="{% url 'account_login' %}">Log In</a> | <a href="{% url 'account_signup' %}">Sign Up</a>
+{% if user.is_authenticated %}
+    Wellcome <b>{{ user.username }}</b> | <a href="{% url 'account_logout' %}">Log Out</a>
+{% else %}
+    <a href="{% url 'account_login' %}">Log In</a> | <a href="{% url 'account_signup' %}">Sign Up</a>
+{% endif %}
 {% block content %}
 
 {% endblock %}
