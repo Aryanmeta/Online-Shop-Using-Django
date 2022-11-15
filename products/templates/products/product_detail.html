@@ -1,0 +1,8 @@
+{% extends '_base.html' %}
+{% block title %}Product Detail{% endblock %}
+{% block content %}
+        <h5>{{ product.title | capfirst}}</h5>
+        <h5>{{ product.description | truncatewords:30 | linebreaks }}</h5>
+        <h5>{{ product.price }}</h5>
+        <h5>{{ product.datetime_created }}</h5>
+{% endblock %}
