@@ -1,4 +1,5 @@
 {% extends '_base.html' %}
+{% load static %}
 {% block title %}Product Detail{% endblock %}
 {% block content %}
     <!-- Main Wrapper Start -->
@@ -116,34 +117,34 @@
                                         <div class="product-reviews">
                                             <h3 class="review__title">۱ نظر برای لباس تابستانی</h3>
                                             <ul class="review__list">
-                                                <li class="review__item">
-                                                    <div class="review__container">
-                                                        <div class="review__text">
-                                                            <div class="d-flex flex-sm-row flex-row">
-                                                                <img src="assets/img/others/comment-1.jpg"
-                                                                     alt="Review Avatar" class="review__avatar">
-                                                                <div>
-                                                                    <div class="review__meta">
-                                                                        <strong class="review__author px-4">علی
-                                                                            علوی</strong>
-                                                                        <span class="review__dash">-</span>
-                                                                        <span class="review__published-date">۱۲ مرداد ۱۴۰۱</span>
-                                                                    </div>
-                                                                    <div class="product-rating">
-                                                                        <div class="m-0 star-rating star-five">
-                                                                            <span>Rated <strong
-                                                                                    class="rating">5.00</strong> out of 5</span>
+                                                {% for comment in product.comments.all %}
+                                                    <li class="review__item">
+                                                        <div class="review__container">
+                                                            <div class="review__text">
+                                                                <div class="d-flex flex-sm-row flex-row">
+                                                                    <img src="{% static 'img/others/comment-1.jpg' %}"
+                                                                         alt="Review Avatar" class="review__avatar p-3">
+                                                                    <div>
+                                                                        <div class="review__meta">
+                                                                            <span class="review__published-date">{{ comment.datetime_created }}</span>
+                                                                            <span class="review__dash">-</span>
+                                                                            <strong class="review__author px-4">{{ comment.author.username }}</strong>
                                                                         </div>
+                                                                        <div class="product-rating">
+                                                                            <div class="m-2 star-rating star-five">
+                                                                            <span>Rated <strong
+                                                                                    class="rating">{{ product.starts }}</strong> out of 5</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="review__description text-right px-4 p-3">
+                                                                            {{ comment.body }}
+                                                                        </p>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <p class="review__description text-right px-4">
-                                                                از خرید خودم راضی هستم. واقعا خیلی خوب بسته بندی شده بود
-                                                                و همینطور سر زمان رسید. واقعا نسبت به قیمت خیلی می ارزه.
-                                                            </p>
                                                         </div>
-                                                    </div>
-                                                </li>
+                                                    </li>
+                                                {% endfor %}
                                             </ul>
                                             <div class="review-form-wrapper">
                                                 <div class="row">
