@@ -1,5 +1,6 @@
 {% extends '_base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block title %}Product Detail{% endblock %}
 {% block content %}
     <!-- Main Wrapper Start -->
@@ -152,37 +153,10 @@
                                                     <div class="col-lg-8 m-auto">
                                                         <span class="reply-title pull-right">نظر خود را بنویسید</span>
                                                         <br>
-                                                        <form action="#" class="form text-right">
-                                                            <div class="form-notes mb--20">
-                                                                <p class="my-3"><span class="required">*</span>ایمیل شما
-                                                                    برای دیگران نشان داده نمیشود.</p>
-                                                            </div>
-                                                            <div class="form__group mb--10">
-                                                                <label class="form__label d-block" for="email">متن نظر
-                                                                    شما<span class="required">*</span></label>
-                                                                <textarea name="review" id="review"
-                                                                          class="form__input form__input--textarea"></textarea>
-                                                            </div>
-                                                            <div class="form__group mb--20">
-                                                                <label class="form__label d-block" for="name">نام
-                                                                    شما<span class="required">*</span></label>
-                                                                <input type="text" name="name" id="name"
-                                                                       class="form__input">
-                                                            </div>
-                                                            <div class="form__group mb--20">
-                                                                <label class="form__label d-block" for="email">ایمیل شما<span
-                                                                        class="required">*</span></label>
-                                                                <input type="email" name="email" id="email"
-                                                                       class="form__input">
-                                                            </div>
-                                                            <div class="form__group">
-                                                                <div class="form-row">
-                                                                    <div class="col-12">
-                                                                        <input type="submit" value="ارسال"
-                                                                               class="btn-submit">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                        <form action="" method="POST">
+                                                            {% csrf_token %}
+                                                            {{ comment_form | crispy }}
+                                                            <input type="submit" value="ارسال">
                                                         </form>
                                                     </div>
                                                 </div>
