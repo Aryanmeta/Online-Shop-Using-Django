@@ -10,4 +10,4 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ['product', 'author', 'starts', 'datetime_created', 'active']
+    list_display = ['product', 'author', 'body', 'starts', 'datetime_created', 'active']
