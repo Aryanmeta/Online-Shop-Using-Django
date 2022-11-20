@@ -21,7 +21,7 @@ class Product(models.Model):
 
 class ActiveCommentManager(models.Manager):
     def get_queryset(self):
-        return super(ActiveCammentManager, self).get_queryset().filter(active=True)
+        return super(ActiveCommentManager, self).get_queryset().filter(active=True)
 
 
 class Comment(models.Model):
@@ -42,7 +42,7 @@ class Comment(models.Model):
 
     active = models.BooleanField(default=True)
 
-    # manager
+    # Manager
     objects = models.Manager
     active_comments_manager = ActiveCommentManager()
 
