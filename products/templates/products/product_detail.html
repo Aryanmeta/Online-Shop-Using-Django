@@ -1,6 +1,9 @@
 {% extends '_base.html' %}
+
 {% load static %}
 {% load crispy_forms_tags %}
+{% load comment_tags %}
+
 {% block title %}Product Detail{% endblock %}
 {% block content %}
     <!-- Main Wrapper Start -->
@@ -77,7 +80,7 @@
                                     </a>
                                     <a class="m-0 product-data-tab__link nav-link" id="nav-reviews-tab"
                                        data-toggle="tab" href="#nav-reviews" role="tab" aria-selected="true">
-                                        <span>نظرات ({{ product.comments.count }})</span>
+                                        <span>نظرات ({{ product.comments.all|only_active_comments|length }})</span>
                                     </a>
                                 </div>
                                 <div class="tab-content product-data-tab__content" id="product-tabContent">
@@ -116,9 +119,9 @@
                                     <div class="tab-pane fade" id="nav-reviews" role="tabpanel"
                                          aria-labelledby="nav-reviews-tab">
                                         <div class="product-reviews">
-                                            <h3 class="review__title">{{ product.comments.count }} نظر برای <b>{{ product.title }}</b></h3>
+                                            <h3 class="review__title">{{ product.comments.all|only_active_comments|length }} نظر برای <b>{{ product.title }}</b></h3>
                                             <ul class="review__list">
-                                                {% for comment in product.comments.all %}
+                                                {% for comment in product.comments.all|only_active_comments %}
                                                     <li class="review__item">
                                                         <div class="review__container">
                                                             <div class="review__text">
