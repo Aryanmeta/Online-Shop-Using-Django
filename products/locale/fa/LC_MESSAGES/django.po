@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-22 18:26+0330\n"
+"POT-Creation-Date: 2022-11-22 19:21+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\models.py:30
+msgid "Very Bad"
+msgstr "خیلی بد"
+
+#: .\models.py:31
+msgid "Bad"
+msgstr "بد"
+
+#: .\models.py:32
+msgid "Normal"
+msgstr "معمولی"
+
+#: .\models.py:33
+msgid "Good"
+msgstr "خوب"
+
+#: .\models.py:34
+msgid "Perfect"
+msgstr "عالی"
+
+#: .\models.py:42
+msgid "Comment"
+msgstr "متن دیدگاه"
+
+#: .\models.py:43
+msgid "your star"
+msgstr "امتیاز شما"
 
 #: .\templates\products\product_detail.html:18
 msgid "Product detail of"
@@ -39,7 +67,7 @@ msgstr "توضیحات محصول"
 
 #: .\templates\products\product_detail.html:159
 msgid "Write your comment"
-msgstr "نظر خود را وارد کنید"
+msgstr "نظر خود را بنویسید"
 
 #: .\templates\products\product_detail.html:165
 msgid "Send"
