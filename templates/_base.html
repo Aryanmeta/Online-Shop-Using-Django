@@ -129,11 +129,11 @@
     <!-- Header End -->
 
     {% if messages %}
-        <ul class="messages">
+        <div class="cantainer">
             {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                <div class="alert alert-{{ message-tags }}">{{ message }}</div>
             {% endfor %}
-        </ul>
+        </div>
     {% endif %}
 
 {% block content %}
