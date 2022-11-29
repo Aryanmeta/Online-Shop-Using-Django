@@ -58,3 +58,8 @@ class Cart:
 
         for item in cart.values():
             yield item
+
+    def __len__(self):
+        return len(self.card.keys())
+
+
