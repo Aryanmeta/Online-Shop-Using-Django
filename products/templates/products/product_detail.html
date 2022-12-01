@@ -120,7 +120,8 @@
                                     <div class="tab-pane fade" id="nav-reviews" role="tabpanel"
                                          aria-labelledby="nav-reviews-tab">
                                         <div class="product-reviews">
-                                            <h3 class="review__title">{{ product.comments.all|only_active_comments|length }} نظر برای <b>{{ product.title }}</b></h3>
+                                            <h3 class="review__title">{{ product.comments.all|only_active_comments|length }}
+                                                نظر برای <b>{{ product.title }}</b></h3>
                                             <ul class="review__list">
                                                 {% for comment in product.comments.all|only_active_comments %}
                                                     <li class="review__item">
@@ -159,7 +160,8 @@
                                                             {% trans 'Write your comment' %}
                                                         </span>
                                                         <br>
-                                                        <form action="{% url 'comment_create' product.id %}" method="POST">
+                                                        <form action="{% url 'comment_create' product.id %}"
+                                                              method="POST">
                                                             {% csrf_token %}
                                                             {{ comment_form | crispy }}
                                                             <input type="submit" value="{% trans 'Send' %}">
