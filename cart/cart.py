@@ -59,7 +59,7 @@ class Cart:
             yield item
 
     def __len__(self):
-        return len(self.card.keys())
+        return len(self.cart.keys())
 
     def clear(self):
         del self.session['cart']
