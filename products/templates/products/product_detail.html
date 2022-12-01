@@ -45,16 +45,11 @@
                                     <span class="money old-price text-danger">۲۱۰,۰۰۰ {% trans '$' %}</span>
                                 </div>
                                 <div class="product-action d-flex align-items-sm-center align-content-center mb--30">
-                                    <div class="quantity-wrapper d-flex justify-content-start">
-                                        <div class="quantity">
-                                            <input type="number" class="quantity-input" name="qty" id="qty" value="1"
-                                                   min="1">
-                                        </div>
-                                    </div>
-                                    <button type="button" class="btn btn-small btn-bg-red btn-color-white btn-hover-2"
-                                            onclick="window.location.href='cart.html'">
-                                        {% trans 'Add To Cart' %}
-                                    </button>
+                                    <form action="{% url 'cart:cart_add' product.id %}" method="POST">
+                                        {% csrf_token %}
+                                        {{ add_to_cart_form | crispy }}
+                                        <button class="btn" type="submit">{% trans 'Add To Cart' %}</button>
+                                    </form>
                                 </div>
                                 <div class="product-footer-meta mt-5 pt-5">
                                     <p><span class="m-0">{% trans 'Categories' %}:</span>
