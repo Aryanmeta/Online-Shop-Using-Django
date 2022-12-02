@@ -13,7 +13,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mb-md--50">
-                        <form class="cart-form" action="#">
                             <div class="row no-gutters">
                                 <div class="col-12">
                                     <div class="table-content table-responsive">
@@ -22,7 +21,7 @@
                                             <tr>
                                                 <th>&nbsp;</th>
                                                 <th>عکس محصول</th>
-                                                <th class="text-left">نام محصول</th>
+                                                <th>نام محصول</th>
                                                 <th>قیمت</th>
                                                 <th>مقدار</th>
                                                 <th>مجموع</th>
@@ -31,13 +30,13 @@
                                             <tbody>
                                             {% for item in cart %}
                                                 <tr>
-                                                    <td class="product-remove text-left"><a href="{% url 'cart:cart_remove' item.product_obj.id %}"><i
+                                                    <td class="product-remove text-left"><a
+                                                            href="{% url 'cart:cart_remove' item.product_obj.id %}"><i
                                                             class="flaticon flaticon-cross"></i></a></td>
                                                     <td class="product-thumbnail text-left">
-                                                        <img src="assets/img/products/prod-10-70x88.jpg"
-                                                             alt="Product Thumnail">
+                                                        <img src="assets/img/products/prod-10-70x88.jpg">
                                                     </td>
-                                                    <td class="product-name wide-column">
+                                                    <td class="product-name">
                                                         <h3>
                                                             <a href="{{ item.product_obj.get_absolute_url }}">
                                                                 {{ item.product_obj.title }}
@@ -50,10 +49,15 @@
                                                                 </span>
                                                     </td>
                                                     <td class="product-quantity">
-                                                        <div class="quantity">
-                                                            <input type="number" class="quantity-input" name="qty"
-                                                                   id="qty-1" value="{{ item.quantity }}" min="1">
-                                                        </div>
+                                                        <form class="d-flex" method="POST" action="{% url 'cart:cart_add' item.product_obj.id %}">
+                                                            {% csrf_token %}
+                                                            <div class="quantity">
+                                                                <input type="number" class="quantity-input" name="quantity"
+                                                                       id="qty-1" value="{{ item.quantity }}" min="1">
+                                                            </div>
+                                                                {{ item.product_update_quantity_form.inplace }}
+                                                                <button class="small" type="submit"><i class="fa fa-refresh"></i></button>
+                                                        </form>
                                                     </td>
                                                     <td class="product-total-price">
                                                                 <span class="product-price-wrapper">
@@ -72,7 +76,6 @@
                                     <button type="submit" class="cart-form__btn">خالی کردن سبد خرید</button>
                                 </div>
                             </div>
-                        </form>
                     </div>
                     <div class="col-lg-4">
                         <div class="cart-collaterals">
