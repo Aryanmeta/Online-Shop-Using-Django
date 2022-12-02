@@ -47,7 +47,10 @@
                                 <div class="product-action d-flex align-items-sm-center align-content-center mb--30">
                                     <form action="{% url 'cart:cart_add' product.id %}" method="POST">
                                         {% csrf_token %}
-                                        {{ add_to_cart_form | crispy }}
+                                        <div class="quantity">
+                                            <input type="number" class="quantity-input" name="quantity" id="qty"
+                                                   value="1" min="1" max="30">
+                                        </div>
                                         <button class="btn" type="submit">{% trans 'Add To Cart' %}</button>
                                     </form>
                                 </div>
