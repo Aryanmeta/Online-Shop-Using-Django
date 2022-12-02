@@ -25,3 +25,13 @@ def add_to_cart_view(request, product_id):
         cart.add(product, quantity)
 
     return redirect('cart:cart_detail')
+
+
+def remove_from_cart(request, product_id):
+    cart = Cart(request)
+
+    product = get_object_or_404(Product, id=product_id)
+
+    cart.remove(product)
+
+    return redirect('cart:cart_detail')
