@@ -89,7 +89,7 @@
                                 <li class="header-toolbar__item mini-cart-item">
                                     <a href="#miniCart" class="header-toolbar__btn toolbar-btn mini-cart-btn">
                                         <i class="flaticon flaticon-shopping-cart"></i>
-                                        <sup class="mini-cart-count">2</sup>
+                                        <sup class="mini-cart-count">{{ cart|length }}</sup>
                                     </a>
                                 </li>
                                 <li class="header-toolbar__item user-info">
@@ -99,7 +99,7 @@
                                     <ul class="user-info-menu">
                                         {% if user.is_authenticated %}
                                             <li>
-                                                <a class="text-right" href="{% url 'account_logout' %}">{% trans 'Logout' %}</a>
+                                                <a class="text-right" href="{% url 'account_logout' %}">{% trans 'Sign Out' %}</a>
                                             </li>
                                             <li>
                                                 <a class="text-right" href="profile.html">{% trans 'Profile' %}</a>
@@ -109,7 +109,7 @@
                                                 <a class="text-right" href="{% url 'account_login' %}">{% trans 'Login' %}</a>
                                             </li>
                                             <li>
-                                                <a class="text-right" href="{% url 'account_signup' %}">{% trans 'Signup' %}</a>
+                                                <a class="text-right" href="{% url 'account_signup' %}">{% trans 'Sign Up' %}</a>
                                             </li>
                                         {% endif %}
                                     </ul>
