@@ -7,6 +7,10 @@
 
 {% block title %}Product Detail{% endblock %}
 {% block content %}
+
+    {% trans 'Cart' as Cart %}
+    {% include 'top_header.html' with header_name=Cart %}
+
     <!-- Main Content Wrapper Start -->
     <div class="main-content-wrapper">
         <div class="page-content-inner ptb--80">
