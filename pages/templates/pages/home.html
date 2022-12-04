@@ -1,8 +1,9 @@
 {% extends '_base.html' %}
+{% load i18n %}
 
 {% block title %}Home Page{% endblock %}
 
 {% block content %}
-    <h2>Home</h2>
-    <p>Welcome to Online Shop</p>
+    {% trans 'Home' as Home %}
+    {% include 'top_header.html' with header_name=Home %}
 {% endblock %}
