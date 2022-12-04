@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-03 13:01+0330\n"
+"POT-Creation-Date: 2022-12-04 19:03+0330\n"
 "PO-Revision-Date: 2022-12-03 13:04+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,42 +46,41 @@ msgstr "متن دیدگاه"
 msgid "your star"
 msgstr "امتیاز شما"
 
-#: .\templates\products\product_detail.html:18
-msgid "Product detail of"
-msgstr "توضیحات محصول"
-
-#: .\templates\products\product_detail.html:45
+#: .\templates\products\product_detail.html:34
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\products\product_detail.html:55
+#: .\templates\products\product_detail.html:46
 msgid "Add to Cart"
 msgstr "اضافه به سبد خرید"
 
-#: .\templates\products\product_detail.html:61
+#: .\templates\products\product_detail.html:52
 msgid "Categories"
 msgstr "دسته بندی ها"
 
-#: .\templates\products\product_detail.html:77
+#: .\templates\products\product_detail.html:68
 msgid "Product Description"
 msgstr "توضیحات محصول"
 
-#: .\templates\products\product_detail.html:163
+#: .\templates\products\product_detail.html:154
 msgid "Write your comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\products\product_detail.html:170
+#: .\templates\products\product_detail.html:161
 msgid "Send"
 msgstr "ارسال"
 
-#: .\templates\products\product_detail.html:174
+#: .\templates\products\product_detail.html:165
 msgid "To write your comment please"
 msgstr "برای ثبت نظرت باید وارد سایت بشی !"
 
-#: .\templates\products\product_detail.html:175
+#: .\templates\products\product_detail.html:166
 msgid "Login"
 msgstr "وارد شوید"
 
 #: .\views.py:44
 msgid "Comment successfully created"
 msgstr "نظرت ثبت شد !"
+
+#~ msgid "Product detail of"
+#~ msgstr "توضیحات محصول"
