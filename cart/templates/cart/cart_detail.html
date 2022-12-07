@@ -17,8 +17,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mb-md--50">
-                            <div class="row no-gutters">
-                                <div class="col-12">
+                        <div class="row no-gutters">
+                            <div class="col-12">
                                 {% if cart %}
                                     <div class="table-content table-responsive">
                                         <table class="table text-center">
@@ -54,14 +54,17 @@
                                                                 </span>
                                                     </td>
                                                     <td class="product-quantity">
-                                                        <form class="d-flex" method="POST" action="{% url 'cart:cart_add' item.product_obj.id %}">
+                                                        <form class="d-flex" method="POST"
+                                                              action="{% url 'cart:cart_add' item.product_obj.id %}">
                                                             {% csrf_token %}
                                                             <div class="quantity">
-                                                                <input type="number" class="quantity-input" name="quantity"
+                                                                <input type="number" class="quantity-input"
+                                                                       name="quantity"
                                                                        id="qty-1" value="{{ item.quantity }}" min="1">
                                                             </div>
-                                                                {{ item.product_update_quantity_form.inplace }}
-                                                                <button class="small" type="submit"><i class="fa fa-refresh"></i></button>
+                                                            {{ item.product_update_quantity_form.inplace }}
+                                                            <button class="small" type="submit"><i
+                                                                    class="fa fa-refresh"></i></button>
                                                         </form>
                                                     </td>
                                                     <td class="product-total-price">
@@ -78,27 +81,19 @@
                                     <p>{% trans 'Cart is empty! Please add some product to the cart' %}</p>
                                     <a href="{% url 'product_list' %}">{% trans 'Go shopping' %}</a>
                                 {% endif %}
-                                </div>
                             </div>
-                            <div class="row no-gutters border-top pt--20 mt--20">
-                                <div class="col-sm-6 text-sm-right">
-                                    <button type="submit" class="cart-form__btn">خالی کردن سبد خرید</button>
-                                </div>
+                        </div>
+                        <div class="row no-gutters border-top pt--20 mt--20">
+                            <div class="col-sm-6 text-sm-right">
+                                <button type="submit" class="cart-form__btn">خالی کردن سبد خرید</button>
                             </div>
+                        </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="cart-collaterals">
                             <div class="cart-totals">
                                 <h5 class="font-size-14 font-bold mb--15">مجموع</h5>
                                 <div class="cart-calculator">
-{#                                    <div class="cart-calculator__item">#}
-{#                                        <div class="cart-calculator__item--head">#}
-{#                                            <span>مجموع</span>#}
-{#                                        </div>#}
-{#                                        <div class="cart-calculator__item--value">#}
-{#                                            <span>۳۴۶,۰۰۰ تومان</span>#}
-{#                                        </div>#}
-{#                                    </div>#}
                                     <div class="cart-calculator__item order-total">
                                         <div class="cart-calculator__item--head">
                                             <span>جمع کل</span>
