@@ -35,11 +35,15 @@
                                             <tbody>
                                             {% for item in cart %}
                                                 <tr>
-                                                    <td class="product-remove text-left"><a
-                                                            href="{% url 'cart:cart_remove' item.product_obj.id %}"><i
-                                                            class="flaticon flaticon-cross"></i></a></td>
+                                                    <td class="product-remove text-left">
+                                                        <a href="{% url 'cart:cart_remove' item.product_obj.id %}">
+                                                            <i class="flaticon flaticon-cross"></i>
+                                                        </a>
+                                                    </td>
                                                     <td class="product-thumbnail text-left">
-                                                        <img src="assets/img/products/prod-10-70x88.jpg">
+                                                        <img class="m-auto" style="max-height: 400px;"
+                                                             src="{{ item.product_obj.image.url }}"
+                                                             alt="">
                                                     </td>
                                                     <td class="product-name">
                                                         <h3>
