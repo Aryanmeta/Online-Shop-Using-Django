@@ -42,8 +42,7 @@
                                                     </td>
                                                     <td class="product-thumbnail text-left">
                                                         <img class="m-auto" style="max-height: 400px;"
-                                                             src="{{ item.product_obj.image.url }}"
-                                                             alt="">
+                                                             src="{{ item.product_obj.image.url }}" alt="">
                                                     </td>
                                                     <td class="product-name">
                                                         <h3>
@@ -88,9 +87,9 @@
                             </div>
                         </div>
                         <div class="row no-gutters border-top pt--20 mt--20">
-                            <div class="col-sm-6 text-sm-right">
-                                <button type="submit" class="cart-form__btn">خالی کردن سبد خرید</button>
-                            </div>
+                            <a href="{% url 'cart:cart_clear' %}">
+                                <i class="cart-form__btn flaticon flaticon-cross"> {% trans 'Empty the shopping cart' %} </i>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -100,18 +99,18 @@
                                 <div class="cart-calculator">
                                     <div class="cart-calculator__item order-total">
                                         <div class="cart-calculator__item--head">
-                                            <span>جمع کل</span>
+                                            <span>{% trans 'Total' %}</span>
                                         </div>
                                         <div class="cart-calculator__item--value">
                                                 <span class="product-price-wrapper">
-                                                    <span class="money">{{ cart.get_total_price }} تومان</span>
+                                                    <span class="money">{{ cart.get_total_price }} {% trans '$' %}</span>
                                                 </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <a href="checkout.html" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
-                                ثبت سفارش
+                                {% trans 'Checkout' %}
                             </a>
                         </div>
                     </div>
