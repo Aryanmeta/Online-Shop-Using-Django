@@ -25,11 +25,11 @@
                                             <thead>
                                             <tr>
                                                 <th>&nbsp;</th>
-                                                <th>عکس محصول</th>
-                                                <th>نام محصول</th>
-                                                <th>قیمت</th>
-                                                <th>مقدار</th>
-                                                <th>مجموع</th>
+                                                <th>{% trans 'Product Photo' %}</th>
+                                                <th>{% trans 'Product Name' %}</th>
+                                                <th>{% trans 'Product Price' %}</th>
+                                                <th>{% trans 'Product Quantity' %}</th>
+                                                <th>{% trans 'Total' %}</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -63,11 +63,15 @@
                                                             <div class="quantity">
                                                                 <input type="number" class="quantity-input"
                                                                        name="quantity"
-                                                                       id="qty-1" value="{{ item.quantity }}" min="1">
+                                                                       id="qty-1"
+                                                                       value="{{ item.quantity }}"
+                                                                       min="1"
+                                                                >
                                                             </div>
                                                             {{ item.product_update_quantity_form.inplace }}
-                                                            <button class="small" type="submit"><i
-                                                                    class="fa fa-refresh"></i></button>
+                                                            <button class="small btn-success" type="submit">
+                                                                <i class="fa fa-refresh"></i>
+                                                            </button>
                                                         </form>
                                                     </td>
                                                     <td class="product-total-price">
@@ -95,7 +99,7 @@
                     <div class="col-lg-4">
                         <div class="cart-collaterals">
                             <div class="cart-totals">
-                                <h5 class="font-size-14 font-bold mb--15">مجموع</h5>
+                                <h5 class="font-size-14 font-bold mb--15">{% trans 'Total' %}</h5>
                                 <div class="cart-calculator">
                                     <div class="cart-calculator__item order-total">
                                         <div class="cart-calculator__item--head">
