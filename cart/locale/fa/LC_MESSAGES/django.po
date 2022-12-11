@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-10 22:45+0330\n"
+"POT-Creation-Date: 2022-12-11 20:00+0330\n"
 "PO-Revision-Date: 2022-12-03 12:24+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,28 +30,46 @@ msgstr "محصولی که انتخاب کردی با موفقیت از سبد خ
 msgid "Cart"
 msgstr "سبد خرید"
 
-#: .\templates\cart\cart_detail.html:84
-msgid "Cart is empty! Please add some product to the cart"
-msgstr "سبد خریدت خالیه ! دوس داشتی یه سر به فروشگاهمون بزن برات کلی محصول آوردیم !!!"
+#: .\templates\cart\cart_detail.html:28
+msgid "Product Photo"
+msgstr "عکس محصول"
 
-#: .\templates\cart\cart_detail.html:85
-msgid "Go shopping"
-msgstr "بریم فروشگاه گردی !!!"
+#: .\templates\cart\cart_detail.html:29
+msgid "Product Name"
+msgstr "نام محصول"
 
-#: .\templates\cart\cart_detail.html:91
-msgid "Empty the shopping cart"
-msgstr "خالی کردن سبد خرید"
+#: .\templates\cart\cart_detail.html:30
+msgid "Product Price"
+msgstr "قیمت"
 
-#: .\templates\cart\cart_detail.html:102 .\templates\cart\cart_sidebar.html:33
+#: .\templates\cart\cart_detail.html:31
+msgid "Product Quantity"
+msgstr "تعداد"
+
+#: .\templates\cart\cart_detail.html:32 .\templates\cart\cart_detail.html:102
+#: .\templates\cart\cart_detail.html:106 .\templates\cart\cart_sidebar.html:33
 msgid "Total"
 msgstr "جمع"
 
-#: .\templates\cart\cart_detail.html:106 .\templates\cart\cart_sidebar.html:26
+#: .\templates\cart\cart_detail.html:88
+msgid "Cart is empty! Please add some product to the cart"
+msgstr ""
+"سبد خریدت خالیه ! دوس داشتی یه سر به فروشگاهمون بزن برات کلی محصول آوردیم !!!"
+
+#: .\templates\cart\cart_detail.html:89
+msgid "Go shopping"
+msgstr "بریم فروشگاه گردی !!!"
+
+#: .\templates\cart\cart_detail.html:95
+msgid "Empty the shopping cart"
+msgstr "خالی کردن سبد خرید"
+
+#: .\templates\cart\cart_detail.html:110 .\templates\cart\cart_sidebar.html:26
 #: .\templates\cart\cart_sidebar.html:34
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\cart\cart_detail.html:113 .\templates\cart\cart_sidebar.html:39
+#: .\templates\cart\cart_detail.html:117 .\templates\cart\cart_sidebar.html:39
 msgid "Checkout"
 msgstr "پرداخت"
 
