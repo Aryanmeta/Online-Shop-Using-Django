@@ -1,5 +1,9 @@
 {% extends '_base.html'%}
+{% load i18n %}
+
 {% block title %}About US{% endblock %}
+
 {% block content %}
-    {% include 'top_header.html' with header_name='About US Page' %}
+    {% trans 'About US Page' as About %}
+    {% include 'top_header.html' with header_name=About %}
 {% endblock %}
