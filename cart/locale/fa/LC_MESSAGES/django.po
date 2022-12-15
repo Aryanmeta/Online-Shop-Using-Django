@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-11 20:00+0330\n"
+"POT-Creation-Date: 2022-12-15 14:40+0330\n"
 "PO-Revision-Date: 2022-12-03 12:24+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,61 +18,66 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\cart.py:37
+#: .\cart\cart.py:37
 msgid "Product successfully added to cart"
 msgstr "محصولی که انتخاب کردی با موفقیت به سبد خریدت اضافه شد "
 
-#: .\cart.py:49
+#: .\cart\cart.py:49
 msgid "Product successfully removed from cart"
 msgstr "محصولی که انتخاب کردی با موفقیت از سبد خریدت برداشته شد "
 
-#: .\templates\cart\cart_detail.html:11 .\templates\cart\cart_sidebar.html:8
+#: .\cart\templates\cart\cart_detail.html:11
+#: .\cart\templates\cart\cart_sidebar.html:8
 msgid "Cart"
 msgstr "سبد خرید"
 
-#: .\templates\cart\cart_detail.html:28
+#: .\cart\templates\cart\cart_detail.html:28
 msgid "Product Photo"
 msgstr "عکس محصول"
 
-#: .\templates\cart\cart_detail.html:29
+#: .\cart\templates\cart\cart_detail.html:29
 msgid "Product Name"
 msgstr "نام محصول"
 
-#: .\templates\cart\cart_detail.html:30
+#: .\cart\templates\cart\cart_detail.html:30
 msgid "Product Price"
 msgstr "قیمت"
 
-#: .\templates\cart\cart_detail.html:31
+#: .\cart\templates\cart\cart_detail.html:31
 msgid "Product Quantity"
 msgstr "تعداد"
 
-#: .\templates\cart\cart_detail.html:32 .\templates\cart\cart_detail.html:102
-#: .\templates\cart\cart_detail.html:106 .\templates\cart\cart_sidebar.html:33
+#: .\cart\templates\cart\cart_detail.html:32
+#: .\cart\templates\cart\cart_detail.html:102
+#: .\cart\templates\cart\cart_detail.html:106
+#: .\cart\templates\cart\cart_sidebar.html:33
 msgid "Total"
 msgstr "جمع"
 
-#: .\templates\cart\cart_detail.html:88
+#: .\cart\templates\cart\cart_detail.html:88
 msgid "Cart is empty! Please add some product to the cart"
 msgstr ""
 "سبد خریدت خالیه ! دوس داشتی یه سر به فروشگاهمون بزن برات کلی محصول آوردیم !!!"
 
-#: .\templates\cart\cart_detail.html:89
+#: .\cart\templates\cart\cart_detail.html:89
 msgid "Go shopping"
 msgstr "بریم فروشگاه گردی !!!"
 
-#: .\templates\cart\cart_detail.html:95
+#: .\cart\templates\cart\cart_detail.html:95
 msgid "Empty the shopping cart"
 msgstr "خالی کردن سبد خرید"
 
-#: .\templates\cart\cart_detail.html:110 .\templates\cart\cart_sidebar.html:26
-#: .\templates\cart\cart_sidebar.html:34
+#: .\cart\templates\cart\cart_detail.html:110
+#: .\cart\templates\cart\cart_sidebar.html:26
+#: .\cart\templates\cart\cart_sidebar.html:34
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\cart\cart_detail.html:117 .\templates\cart\cart_sidebar.html:39
+#: .\cart\templates\cart\cart_detail.html:117
+#: .\cart\templates\cart\cart_sidebar.html:39
 msgid "Checkout"
 msgstr "پرداخت"
 
-#: .\templates\cart\cart_sidebar.html:38
+#: .\cart\templates\cart\cart_sidebar.html:38
 msgid "Go to cart"
 msgstr "رفتن به سبد خرید"
