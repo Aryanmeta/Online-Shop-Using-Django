@@ -4,6 +4,7 @@
 {% load crispy_forms_tags %}
 {% load comment_tags %}
 {% load i18n %}
+{% load jalali_tags %}
 
 {% block title %}Product Detail{% endblock %}
 {% block content %}
@@ -123,8 +124,8 @@
                                                                     <img src="{% static 'img/others/comment-1.jpg' %}"
                                                                          alt="Review Avatar" class="review__avatar p-3">
                                                                     <div>
-                                                                        <div class="review__meta">
-                                                                            <span class="review__published-date">{{ comment.datetime_created }}</span>
+                                                                        <div class="review__meta" dir="ltr">
+                                                                            <span class="review__published-date">{{ comment.datetime_created|to_jalali:'%Y [/%m /%B] /%d _ %H:%M:%S' }}</span>
                                                                             <span class="review__dash">-</span>
                                                                             <strong class="review__author px-4">{{ comment.author.username }}</strong>
                                                                         </div>
