@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class PersionTranslateConfig(AppConfig):
+class PersianTranslateConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'persion_translate'
+    name = 'persian_translate'
