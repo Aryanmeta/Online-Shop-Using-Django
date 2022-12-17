@@ -1,19 +1,10 @@
 {% extends '_base.html' %}
-
+{% load i18n %}
+{% load humanize %}
 {% load persian_traslation_tags %}
 
 {% block title %}Product List{% endblock %}
 {% block content %}
-
-    {#    <!-- Preloader Start -->#}
-    {#    <div class="ShoppingYar-preloader active">#}
-    {#        <div class="ShoppingYar-preloader-inner h-100 d-flex align-items-center justify-content-center">#}
-    {#            <div class="ShoppingYar-child ShoppingYar-bounce1"></div>#}
-    {#            <div class="ShoppingYar-child ShoppingYar-bounce2"></div>#}
-    {#            <div class="ShoppingYar-child zuka-bounce3"></div>#}
-    {#        </div>#}
-    {#    </div>#}
-    {#    <!-- Preloader End -->#}
 
     <!-- Main Wrapper Start -->
     <div class="wrapper">
@@ -27,8 +18,10 @@
                             <div class="shop-toolbar">
                                 <div class="container row align-items-center">
                                     <div class="col-lg-12 mb-md--50 mb-xs--10">
-                                        <div class="shop-toolbar__left d-flex align-items-sm-center align-items-start flex-sm-row flex-column">
-                                            <p class="product-pages"> نمایش {{ products|length }} از {{ products|length }}</p>
+                                        <div class="shop-toolbar__left d-flex align-items-sm-center
+                                        align-items-start flex-sm-row flex-column">
+                                            <p class="product-pages"> {% trans 'Show' %} {{ products|length }}
+                                                {% trans 'Of' %} {{ products|length }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -60,18 +53,24 @@
                                                                     </a>
                                                                 </div>
                                                             </div>
-                                                            <span class="product-badge">تخفیف ویژه</span>
+                                                            <span class="product-badge">{% trans 'Special Discount' %}</span>
                                                         </figure>
                                                         <div class="product-info">
                                                             <h3 class="product-title h6 mb--15">
-                                                                <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+                                                                <a href="{{ product.get_absolute_url }}">
+                                                                    {{ product.title }}
+                                                                </a>
                                                             </h3>
                                                             <div class="product-price-wrapper mb--30">
-                                                                <span class="money text-success ">{{ product.price|translate_number }}</span>
+                                                                <span class="money text-success ">
+                                                                    {{ product.price|intcomma:False|translate_number }}
+                                                                    {% trans '$' %}
+                                                                </span>
                                                             </div>
                                                             <a href="cart.html"
-                                                               class="btn btn-small btn-bg-sand btn-color-dark px-3">اضافه
-                                                                کردن به سبد خرید</a>
+                                                               class="btn btn-small btn-bg-sand btn-color-dark px-3">
+                                                                {% trans 'Add To Cart' %}
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -110,14 +109,18 @@
                                 </div>
                             </div>
                             <div class="footer-widget mb--50 pb--1">
-                                <ul class="footer-menu">
-                                    <li><a href="">درباره ما</a></li>
-                                    <li><a href="">قوانین و مقررات</a></li>
-                                    <li><a href="">تماس با ما</a></li>
+                                <ul class="product-footer-meta footer-menu">
+                                    <li>
+                                        <a href="{% url 'aboutus' %}">{% trans 'About Us' %}</a>
+                                    </li>
+                                    <span> | </span>
+                                    <li>
+                                        <a href="">{% trans 'Terms and Conditions' %}</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="footer-widget">
-                                all rights reserved
+                                {% trans 'All rights reserved' %}
                             </div>
                         </div>
                     </div>
@@ -130,12 +133,13 @@
         <div class="searchform__popup" id="searchForm">
             <a href="#" class="btn-close"><i class="flaticon flaticon-cross"></i></a>
             <div class="searchform__body">
-                <p>در باکس زیر عبارت خود را وارد کنید</p>
+                <p>{% trans 'Start typing and press Enter to search' %}</p>
                 <form class="searchform">
                     <input type="text" name="popup-search" id="popup-search" class="searchform__input"
-                           placeholder="جستجو در بین محصولات...">
-                    <button type="submit" class="searchform__submit"><i
-                            class="flaticon flaticon-magnifying-glass-icon"></i></button>
+                           placeholder="{% trans 'Search Entire Store...' %}">
+                    <button type="submit" class="searchform__submit">
+                        <i class="flaticon flaticon-magnifying-glass-icon"></i>
+                    </button>
                 </form>
             </div>
         </div>
