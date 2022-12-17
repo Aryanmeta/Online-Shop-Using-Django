@@ -6,6 +6,8 @@
 {% load i18n %}
 {% load jalali_tags %}
 
+{% load persian_traslation_tags %}
+
 {% block title %}Product Detail{% endblock %}
 {% block content %}
     <!-- Main Wrapper Start -->
@@ -32,7 +34,7 @@
                                     {{ product.description }}
                                 </p>
                                 <div class="my-5 py-5 product-price-wrapper mb--25">
-                                    <span class="money text-success">{{ product.price }}</span>
+                                    <span class="money text-success">{{ product.price|translate_number }}</span>
                                     <span class="price-separator">-</span>
                                     <span class="money old-price text-danger">۲۱۰,۰۰۰ {% trans '$' %}</span>
                                 </div>
@@ -125,7 +127,7 @@
                                                                          alt="Review Avatar" class="review__avatar p-3">
                                                                     <div>
                                                                         <div class="review__meta" dir="ltr">
-                                                                            <span class="review__published-date">{{ comment.datetime_created|to_jalali:'%Y [/%m /%B] /%d _ %H:%M:%S' }}</span>
+                                                                            <span class="review__published-date">{{ comment.datetime_created|to_jalali:'%Y [/%m /%B] /%d'|translate_number }}</span>
                                                                             <span class="review__dash">-</span>
                                                                             <strong class="review__author px-4">{{ comment.author.username }}</strong>
                                                                         </div>
