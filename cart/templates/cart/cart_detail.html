@@ -4,6 +4,9 @@
 {% load crispy_forms_tags %}
 {% load comment_tags %}
 {% load i18n %}
+{% load humanize %}
+
+{% load persian_traslation_tags %}
 
 {% block title %}Product Detail{% endblock %}
 {% block content %}
@@ -53,7 +56,9 @@
                                                     </td>
                                                     <td class="product-price">
                                                                 <span class="product-price-wrapper">
-                                                                    <span class="money">{{ item.product_obj.price }}</span>
+                                                                    <span class="money">
+                                                                        {{ item.product_obj.price|intcomma:False|translate_number }}
+                                                                        {% trans '$' %} </span>
                                                                 </span>
                                                     </td>
                                                     <td class="product-quantity">
@@ -92,7 +97,8 @@
                         </div>
                         <div class="row no-gutters border-top pt--20 mt--20">
                             <a href="{% url 'cart:cart_clear' %}">
-                                <i class="cart-form__btn flaticon flaticon-cross"> {% trans 'Empty the shopping cart' %} </i>
+                                <i class="cart-form__btn flaticon flaticon-cross"> {% trans 'Empty the shopping cart' %}
+                                </i>
                             </a>
                         </div>
                     </div>
@@ -107,7 +113,10 @@
                                         </div>
                                         <div class="cart-calculator__item--value">
                                                 <span class="product-price-wrapper">
-                                                    <span class="money">{{ cart.get_total_price }} {% trans '$' %}</span>
+                                                    <span class="money">
+                                                        {{ cart.get_total_price|intcomma:False|translate_number }}
+                                                        {% trans '$' %}
+                                                    </span>
                                                 </span>
                                         </div>
                                     </div>
