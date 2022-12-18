@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-17 12:57+0330\n"
+"POT-Creation-Date: 2022-12-18 13:34+0330\n"
 "PO-Revision-Date: 2022-12-03 13:04+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,39 +18,69 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\models.py:13
-#, fuzzy
-#| msgid "Product detail of"
-msgid "Product Image"
+#: .\models.py:10
+msgid "Product Title"
+msgstr "عنوان محصول"
+
+#: .\models.py:11 .\templates\products\product_detail.html:73
+msgid "Product Description"
 msgstr "توضیحات محصول"
 
-#: .\models.py:32
+#: .\models.py:12
+msgid "Product Short Description"
+msgstr "توضیحات کوتاه محصول"
+
+#: .\models.py:13
+msgid "Product Price"
+msgstr "قیمت محصول"
+
+#: .\models.py:14
+msgid "Product Display"
+msgstr "نمایش محصول ؟"
+
+#: .\models.py:15
+msgid "Product Image"
+msgstr "عکس محصول"
+
+#: .\models.py:34
 msgid "Very Bad"
 msgstr "خیلی بد"
 
-#: .\models.py:33
+#: .\models.py:35
 msgid "Bad"
 msgstr "بد"
 
-#: .\models.py:34
+#: .\models.py:36
 msgid "Normal"
 msgstr "معمولی"
 
-#: .\models.py:35
+#: .\models.py:37
 msgid "Good"
 msgstr "خوب"
 
-#: .\models.py:36
+#: .\models.py:38
 msgid "Perfect"
 msgstr "عالی"
 
-#: .\models.py:44
+#: .\models.py:41
+msgid "Product Choice"
+msgstr "انتخاب محصول"
+
+#: .\models.py:46
+msgid "Author Comment"
+msgstr "متن کاربر"
+
+#: .\models.py:47
 msgid "Comment"
 msgstr "متن دیدگاه"
 
-#: .\models.py:45
+#: .\models.py:48
 msgid "your star"
 msgstr "امتیاز شما"
+
+#: .\models.py:53
+msgid "Comment Display"
+msgstr "نمایش متن دیدگاه؟"
 
 #: .\templates\products\product_detail.html:38
 #: .\templates\products\product_detail.html:40
@@ -60,7 +90,6 @@ msgstr "تومان"
 
 #: .\templates\products\product_detail.html:52
 #: .\templates\products\product_list.html:72
-
 msgid "Add To Cart"
 msgstr "اضافه به سبد خرید"
 
@@ -79,10 +108,6 @@ msgstr "پاییزی"
 #: .\templates\products\product_detail.html:61
 msgid "Female"
 msgstr "زنانه"
-
-#: .\templates\products\product_detail.html:73
-msgid "Product Description"
-msgstr "توضیحات محصول"
 
 #: .\templates\products\product_detail.html:77
 msgid "Attributes"
