@@ -7,11 +7,12 @@ from ckeditor.fields import RichTextField
 
 
 class Product(models.Model):
-    title = models.CharField(max_length=100)
-    description = RichTextField()
-    price = models.PositiveIntegerField(default=0)
-    active = models.BooleanField(default=True)
-    image = models.ImageField(verbose_name=_('Product Image'), upload_to='product/product_cover/', blank=True)
+    title = models.CharField(_('Product Title'), max_length=100, blank=True)
+    description = RichTextField(_('Product Description'), blank=True)
+    short_description = models.CharField(_('Product Short Description'), max_length=300, blank=True)
+    price = models.PositiveIntegerField(_('Product Price'), default=0, blank=True)
+    active = models.BooleanField(_('Product Display'), default=True, blank=True)
+    image = models.ImageField(_('Product Image'), upload_to='product/product_cover/', blank=True)
 
     datetime_created = models.DateTimeField(default=timezone.now)
     datetime_modified = models.DateTimeField(auto_now=True)
@@ -36,19 +37,20 @@ class Comment(models.Model):
         ('4', _('Good')),
         ('5', _('Perfect')),
     ]
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments', )
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments',
+                                verbose_name=_('Product Choice'))
     author = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE,
         related_name='comments',
-        verbose_name='Author Comment')
-    body = models.TextField(verbose_name=_('Comment'))
-    starts = models.CharField(max_length=10, choices=PRODUCT_STARS, verbose_name=_('your star'))
+        verbose_name=_('Author Comment'))
+    body = models.TextField(_('Comment'))
+    starts = models.CharField(_('your star'), max_length=10, choices=PRODUCT_STARS)
 
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
 
-    active = models.BooleanField(default=True)
+    active = models.BooleanField(_('Comment Display'), default=True)
 
     # # Manager
     # objects = models.Manager
