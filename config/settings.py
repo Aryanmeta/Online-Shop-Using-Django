@@ -54,11 +54,12 @@ INSTALLED_APPS = [
     'ckeditor',
 
     # local apps
-    'accounts',
-    'pages',
-    'products',
-    'cart',
-    'persian_translate',
+    'accounts.apps.AccountsConfig',
+    'pages.apps.PagesConfig',
+    'products.apps.ProductsConfig',
+    'cart.apps.CartConfig',
+    'persian_translate.apps.PersianTranslateConfig',
+    'orders.apps.OrdersConfig',
 ]
 
 SITE_ID = 1
