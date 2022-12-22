@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'jalali_date',
     'ckeditor',
+    'phonenumber_field',
 
     # local apps
     'accounts.apps.AccountsConfig',
