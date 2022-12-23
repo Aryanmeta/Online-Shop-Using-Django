@@ -26,42 +26,7 @@
                                 <h2>جزئیات سفارش</h2>
                             </div>
                             <div class="checkout-form">
-                                <form action="#" class="form form--checkout">
-                                    <div class="form-row mb--20">
-                                        <div class="form__group col-md-6 mb-sm--30">
-                                            <label for="billing_fname" class="form__label form__label--2">نام  <span class="required">*</span></label>
-                                            <input type="text" name="billing_fname" id="billing_fname" class="form__input form__input--2">
-                                        </div>
-                                        <div class="form__group col-md-6">
-                                            <label for="billing_lname" class="form__label form__label--2">نام خانوادگی  <span class="required">*</span></label>
-                                            <input type="text" name="billing_lname" id="billing_lname" class="form__input form__input--2">
-                                        </div>
-                                    </div>
-                                    <div class="form-row mb--20">
-                                        <div class="form__group col-12">
-                                            <label for="billing_company" class="form__label form__label--2">آدرس</label>
-                                            <input type="text" name="billing_company" id="billing_company" class="form__input form__input--2">
-                                        </div>
-                                    </div>
-                                    <div class="form-row mb--20">
-                                        <div class="form__group col-12">
-                                            <label for="billing_phone" class="form__label form__label--2">شماره همراه <span class="required">*</span></label>
-                                            <input type="text" name="billing_phone" id="billing_phone" class="form__input form__input--2">
-                                        </div>
-                                    </div>
-                                    <div class="form-row mb--20">
-                                        <div class="form__group col-12">
-                                            <label for="billing_email" class="form__label form__label--2">ایمیل  <span class="required">*</span></label>
-                                            <input type="email" name="billing_email" id="billing_email" class="form__input form__input--2">
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form__group col-12">
-                                            <label for="orderNotes" class="form__label form__label--2">یادداشت شما</label>
-                                            <textarea class="form__input form__input--2 form__input--textarea" id="orderNotes" name="orderNotes" placeholder="اگر یادداشتی دارید در اینجا وارد کنید. در غیر این صورت این مکان را خالی بگذارید"></textarea>
-                                        </div>
-                                    </div>
-                                </form>
+                                {{ form|crispy }}
                             </div>
                         </div>
                         <div class="col-xl-5 offset-xl-1 col-lg-6 mt-md--40">
@@ -77,24 +42,27 @@
                                                 <th class="text-right">قیمت نهایی</th>
                                             </tr>
                                         </thead>
+
                                         <tbody>
-                                            <tr>
-                                                <th>محصول شماره یک
-                                                    <strong><span>&#10005;</span>۲</strong>
-                                                </th>
-                                                <td class="text-right">۲۹۶,۰۰۰ تومان</td>
-                                            </tr>
-                                            <tr>
-                                                <th>محصول شماره دو
-                                                    <strong><span>&#10005;</span>۱</strong>
-                                                </th>
-                                                <td class="text-right">۵۸,۰۰۰ تومان</td>
-                                            </tr>
+                                            {% for item in cart %}
+                                                <tr>
+                                                    <th>{{ item.product_obj.title }}
+                                                        <strong><span>&#10005;</span>{{ item.quantity }}</strong>
+                                                    </th>
+                                                    <td class="text-right">
+                                                        {{ item.product_obj.price|intcomma:False|translate_number }}
+                                                        {% trans '$' %}
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
                                         </tbody>
                                         <tfoot>
                                             <tr class="cart-subtotal">
-                                                <th>مجموع</th>
-                                                <td class="text-right">۳۴۸,۰۰۰ تومان</td>
+                                                <th>{% trans 'Total' %}</th>
+                                                <td class="text-right">
+                                                    {{ cart.get_total_price|intcomma:False|translate_number }}
+                                                    {% trans '$' %}
+                                                </td>
                                             </tr>
                                         </tfoot>
                                     </table>

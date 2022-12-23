@@ -18,60 +18,60 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 #: .\models.py:8
 msgid "User"
-msgstr ""
+msgstr "کاربر"
 
 #: .\models.py:9
 msgid "Finalized ?"
-msgstr ""
+msgstr "مهایی شده / نهایی نشده ؟"
 
 #: .\models.py:11
 msgid "First Name"
-msgstr ""
+msgstr "نام"
 
 #: .\models.py:12
 msgid "Last Name"
-msgstr ""
+msgstr "نام خانوادگی"
 
 #: .\models.py:15
 msgid "Phone Number"
-msgstr ""
+msgstr "شماره همراه"
 
 #: .\models.py:17
 msgid "Address"
-msgstr ""
+msgstr "آدرس"
 
 #: .\models.py:18
 msgid "Note"
-msgstr ""
+msgstr "یادداشت"
 
 #: .\models.py:28
 msgid "Order"
-msgstr ""
+msgstr "سفارش"
 
 #: .\models.py:30
 msgid "Product"
-msgstr ""
+msgstr "محصول"
 
 #: .\models.py:31
 msgid "Quantity"
-msgstr ""
+msgstr "تعداد"
 
 #: .\models.py:32
 msgid "Product Price"
-msgstr ""
+msgstr "قیمت محصول"
 
 #: .\templates\orders\order_create.html:16
 msgid "order"
-msgstr ""
+msgstr "ثبت سفارش"
 
 #: .\templates\orders\order_create.html:136
 msgid "About Us"
-msgstr ""
+msgstr "درباره ما"
 
 #: .\templates\orders\order_create.html:140
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "قوانین و مقررات"
 
 #: .\templates\orders\order_create.html:145
 msgid "All rights reserved"
-msgstr ""
+msgstr "تمامی حقوق محفوظ است"
