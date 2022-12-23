@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-23 11:13+0330\n"
+"POT-Creation-Date: 2022-12-23 18:56+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\forms.py:13
+msgid "If you have any note please type here: "
+msgstr "اگر یادداشتی دارید لطفا اینجا تایپ کنید :"
+
 #: .\models.py:8
 msgid "User"
 msgstr "کاربر"
@@ -64,14 +69,23 @@ msgstr "قیمت محصول"
 msgid "order"
 msgstr "ثبت سفارش"
 
-#: .\templates\orders\order_create.html:136
+#: .\templates\orders\order_create.html:54
+#: .\templates\orders\order_create.html:64
+msgid "$"
+msgstr "تومان"
+
+#: .\templates\orders\order_create.html:61
+msgid "Total"
+msgstr "جمع"
+
+#: .\templates\orders\order_create.html:104
 msgid "About Us"
 msgstr "درباره ما"
 
-#: .\templates\orders\order_create.html:140
+#: .\templates\orders\order_create.html:108
 msgid "Terms and Conditions"
 msgstr "قوانین و مقررات"
 
-#: .\templates\orders\order_create.html:145
+#: .\templates\orders\order_create.html:113
 msgid "All rights reserved"
 msgstr "تمامی حقوق محفوظ است"
