@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-23 11:13+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: .\models.py:8
+msgid "User"
+msgstr ""
+
+#: .\models.py:9
+msgid "Finalized ?"
+msgstr ""
+
+#: .\models.py:11
+msgid "First Name"
+msgstr ""
+
+#: .\models.py:12
+msgid "Last Name"
+msgstr ""
+
+#: .\models.py:15
+msgid "Phone Number"
+msgstr ""
+
+#: .\models.py:17
+msgid "Address"
+msgstr ""
+
+#: .\models.py:18
+msgid "Note"
+msgstr ""
+
+#: .\models.py:28
+msgid "Order"
+msgstr ""
+
+#: .\models.py:30
+msgid "Product"
+msgstr ""
+
+#: .\models.py:31
+msgid "Quantity"
+msgstr ""
+
+#: .\models.py:32
+msgid "Product Price"
+msgstr ""
+
+#: .\templates\orders\order_create.html:16
+msgid "order"
+msgstr ""
+
+#: .\templates\orders\order_create.html:136
+msgid "About Us"
+msgstr ""
+
+#: .\templates\orders\order_create.html:140
+msgid "Terms and Conditions"
+msgstr ""
+
+#: .\templates\orders\order_create.html:145
+msgid "All rights reserved"
+msgstr ""
