@@ -58,7 +58,8 @@
                                                                 <span class="product-price-wrapper">
                                                                     <span class="money">
                                                                         {{ item.product_obj.price|intcomma:False|translate_number }}
-                                                                        {% trans '$' %} </span>
+                                                                        {% trans '$' %}
+                                                                    </span>
                                                                 </span>
                                                     </td>
                                                     <td class="product-quantity">
@@ -81,7 +82,10 @@
                                                     </td>
                                                     <td class="product-total-price">
                                                                 <span class="product-price-wrapper">
-                                                                    <span class="money">{{ item.total_price }}</span>
+                                                                    <span class="money">
+                                                                        {{ item.total_price|intcomma:False|translate_number }}
+                                                                        {% trans '$' %}
+                                                                    </span>
                                                                 </span>
                                                     </td>
                                                 </tr>
