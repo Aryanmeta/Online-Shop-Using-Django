@@ -67,10 +67,19 @@
                                                                     {% trans '$' %}
                                                                 </span>
                                                             </div>
-                                                            <a href="cart.html"
-                                                               class="btn btn-small btn-bg-sand btn-color-dark px-3">
-                                                                {% trans 'Add To Cart' %}
-                                                            </a>
+                                                            <form action="{% url 'cart:cart_add' product.id %}"
+                                                                  method="POST">
+                                                                {% csrf_token %}
+                                                                <div class="quantity-wrapper">
+                                                                    <input type="hidden" class="quantity-input"
+                                                                           name="quantity" id="qty"
+                                                                           value="1" min="1" max="30">
+                                                                    <button type="submit"
+                                                                            class="btn btn-small btn-bg-red btn-color-white btn-hover-2">
+                                                                        {% trans 'Add To Cart' %}
+                                                                    </button>
+                                                                </div>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </div>
