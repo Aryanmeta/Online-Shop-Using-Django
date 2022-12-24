@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-23 18:56+0330\n"
+"POT-Creation-Date: 2022-12-24 03:41+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\forms.py:13
+#: .\forms.py:14
 msgid "If you have any note please type here: "
 msgstr "اگر یادداشتی دارید لطفا اینجا تایپ کنید :"
 
@@ -27,7 +27,7 @@ msgstr "کاربر"
 
 #: .\models.py:9
 msgid "Finalized ?"
-msgstr "مهایی شده / نهایی نشده ؟"
+msgstr "نهایی شده / نهایی نشده ؟"
 
 #: .\models.py:11
 msgid "First Name"
@@ -49,6 +49,14 @@ msgstr "آدرس"
 msgid "Note"
 msgstr "یادداشت"
 
+#: .\models.py:20
+msgid "Created"
+msgstr "تاریخ ایجاد"
+
+#: .\models.py:21
+msgid "Modified"
+msgstr "تاریخ تغییر"
+
 #: .\models.py:28
 msgid "Order"
 msgstr "سفارش"
@@ -65,27 +73,39 @@ msgstr "تعداد"
 msgid "Product Price"
 msgstr "قیمت محصول"
 
-#: .\templates\orders\order_create.html:16
+#: .\templates\orders\order_create.html:15
 msgid "order"
 msgstr "ثبت سفارش"
 
-#: .\templates\orders\order_create.html:54
-#: .\templates\orders\order_create.html:64
+#: .\templates\orders\order_create.html:66
+msgid "Submit"
+msgstr "ارسال"
+
+#: .\templates\orders\order_create.html:92
+#: .\templates\orders\order_create.html:102
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\orders\order_create.html:61
+#: .\templates\orders\order_create.html:99
 msgid "Total"
 msgstr "جمع"
 
-#: .\templates\orders\order_create.html:104
+#: .\templates\orders\order_create.html:142
 msgid "About Us"
 msgstr "درباره ما"
 
-#: .\templates\orders\order_create.html:108
+#: .\templates\orders\order_create.html:146
 msgid "Terms and Conditions"
 msgstr "قوانین و مقررات"
 
-#: .\templates\orders\order_create.html:113
+#: .\templates\orders\order_create.html:151
 msgid "All rights reserved"
 msgstr "تمامی حقوق محفوظ است"
+
+#: .\views.py:17
+msgid "You can not proceed to checkout page because your cart is empty."
+msgstr "شما نمی توانید پرداختی انجام دهید چون سبد خریدتان خالی است ."
+
+#: .\views.py:41
+msgid "Your order has successfully placed. "
+msgstr "سفارش شما با موفقیت انجام شد ."
