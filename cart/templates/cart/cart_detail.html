@@ -99,12 +99,14 @@
                                 {% endif %}
                             </div>
                         </div>
-                        <div class="row no-gutters border-top pt--20 mt--20">
-                            <a href="{% url 'cart:cart_clear' %}">
-                                <i class="cart-form__btn flaticon flaticon-cross"> {% trans 'Empty the shopping cart' %}
-                                </i>
-                            </a>
-                        </div>
+                        {% if cart|length %}
+                            <div class="row no-gutters border-top pt--20 mt--20">
+                                <a href="{% url 'cart:cart_clear' %}">
+                                    <i class="cart-form__btn flaticon flaticon-cross"> {% trans 'Empty the shopping cart' %}
+                                    </i>
+                                </a>
+                            </div>
+                        {% endif %}
                     </div>
                     <div class="col-lg-4">
                         <div class="cart-collaterals">
@@ -126,7 +128,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="checkout.html" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
+                            <a href="{% url 'orders:order_create' %}" class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
                                 {% trans 'Checkout' %}
                             </a>
                         </div>
